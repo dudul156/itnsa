@@ -1,0 +1,22 @@
+MODULE A
+LINUX ENVIRONMENT
+PT Nusantara Digital Services is a growing technology company that provides web hosting and communication services for several local businesses. To improve security and reliability, the IT department is redesigning their infrastructure by separating the network into two zones: an Internal Network (INT) for critical services and a Demilitarized Zone (DMZ) for public-facing applications. A firewall server acts as the main gateway between the internet and the company networks, controlling traffic and protecting internal resources. The internal server (int-mail) provides core infrastructure services including DNS resolution, LDAP directory services for authentication, and a mail system for employee communication. In the DMZ, a reverse proxy load balancer (web-lb) distributes incoming web traffic to two backend web servers (web01 and web02) to ensure high availability of the company's web services. Remote users access the infrastructure through the internet using a client machine that will be used to verify whether services such as web access, email delivery, and DNS resolution are functioning correctly according to the company's network policies. As the system administrator, your task is to deploy and configure all required services on the provided servers and ensure that the entire infrastructure operates securely and reliably.
+Logical Topology
+INT
+int-mail
+Internet
+tw
+Task Summary
+DNS Server (Bind9)
+LDAP (OpenLDAP)
+Mail Server (Postfix + Dovecot)
+WebMail (Roundcube)
+Web Server (Nginx)
+Reverse Proxy (HAProxy)
+Firewall (nftables)
+·
+VPN (OpenVPN)
+client
+DMZ
+web-lb
+web01 web02
